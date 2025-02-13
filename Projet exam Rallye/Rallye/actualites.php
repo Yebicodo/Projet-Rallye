@@ -17,7 +17,7 @@ $conn = @new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Échec de la connexion : " . $conn->connect_error . " (Code d'erreur : " . $conn->connect_errno . ")");
 } else {
-    echo "Connexion réussie<br>";
+    // echo "Connexion réussie<br>";
 }
 ?>
 
@@ -62,19 +62,19 @@ if ($conn->connect_error) {
         
         <section class="grille-des-actualites">
             <?php
-            $sql = "SELECT title, content, author, publish_date FROM actualites";
+            $sql = "SELECT title, content, author, publish_date, image_path FROM actualites";
             $result = $conn->query($sql);
 
             if (!$result) {
                 die("Erreur dans la requête SQL : " . $conn->error);
             } else {
-                echo "Requête SQL réussie<br>";
+                // echo "Requête SQL réussie<br>";
             }
 
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
                     echo "<article class='carte-actualite'>";
-                    echo "<img src='img\Actualité (4).jpg'>"; // Remplace "default-news.jpg" par l'image de ton choix
+                    echo "<img src='" . $row["image_path"] . "' alt='Image d'actualité'>"; // Utilise le chemin de l'image stocké
                     echo "<div class='contenu'>";
                     echo "<span class='categorie'>Actualité</span>";
                     echo "<h3>" . $row["title"] . "</h3>";
@@ -94,6 +94,5 @@ if ($conn->connect_error) {
 
     <footer>
         <p>&copy; 2024 RallyePéÏ. Tous droits réservés.</p>
-    </footer>
 </body>
 </html>
