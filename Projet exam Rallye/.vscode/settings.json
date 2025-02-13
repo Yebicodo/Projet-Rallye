@@ -1,3 +1,37 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "workbench.editorAssociations": {
+        "*.rar": "default"
+    },
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "files.autoSave": "afterDelay",
+    "liveServer.settings.donotVerifyTags": true,
+    "workbench.startupEditor": "none",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "window.zoomLevel": -1,
+    "workbench.colorTheme": "Default Light+",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "php.validate.executablePath": "C:/wamp64/bin/php/php8.4.0/php.exe",
+    "open-php-html-js-in-browser.selectedBrowser": "Chrome",
+    "open-php-html-js-in-browser.documentRootFolder": "C:/wamp64/www",
+    "open-php-html-js-in-browser.urlToOpen": "http://localhost/",
+    "php.debug.executablePath": "C:/wamp64/bin/php/php8.4.0/php.exe",
+    "php.executables": {},
+    "settingsSync.ignoredExtensions": [
+        "vscode.php-language-features"
+    ],
+    "phpserver.phpPath": "C:/wamp64/bin/php/php8.4.0/php.exe",
+    "geminicodeassist.project": "yebicodo",
+    "intelephense.phpdoc.classTemplate": {
+        "summary": "$1",
+        "tags": [
+            "@package ${1:$SYMBOL_NAMESPACE}"
+        ]
+    }
 }
