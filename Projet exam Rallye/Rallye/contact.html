@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Rallye Passion</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">RallyePéÏ</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="background-image">
+        <h1>Contact</h1>
+        <form action="contact.php" method="POST" class="formulaire-contact">
+            <div class="groupe-formulaire">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="groupe-formulaire">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="groupe-formulaire">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="button-container">
+                <button type="submit" class="btn-envoyer">Envoyer</button>
+            </div>
+        </form>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 RallyePéÏ. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

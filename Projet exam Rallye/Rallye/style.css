@@ -1,0 +1,546 @@
+/* Variables et Reset */
+:root {
+    --primary-color: #e63946;
+    --secondary-color: #1d3557;
+    --background-color: #f1faee;
+    --text-color: #2b2d42;
+    --accent-color: #457b9d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Righteous', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Navigation */
+nav {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('img/imgdaccueil.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    animation: fadeIn 1s ease-in;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: #f1faeebd;
+    font-size: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+/* Nouvelle section */
+/* CSS pour les cartes liées */
+a.carte {
+    text-decoration: none; /* Supprimer le soulignement du texte */
+    display: block;
+    color: inherit;
+}
+
+a.carte:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles existants */
+.conteneur {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Entête */
+.entête {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color:#2b516e; /* Ajuster la couleur du titre */
+}
+
+/* Grille */
+.grille {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+/* Cartes */
+.carte {
+    background-color: #2A3444;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carte-large {
+    grid-column: span 2;
+    height: 300px;
+}
+
+.numéro {
+    font-size: 4rem;
+    font-weight: 300;
+    opacity: 0.5;
+    display: block;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0 1rem;
+}
+
+p {
+    font-size: 20px;
+    opacity: 0.8;
+   
+}
+
+/* Couleurs */
+.orange {
+    background-color: #F26430;
+}
+
+.bleu-foncé {
+    background-color:#1486c2;
+}
+
+.bleu-moyen {
+    background-color:#c93531;
+}
+
+.gris-clair {
+    background-color:#fbd21a;
+    color: #1f2937;
+}
+
+/* Images */
+.carte-large img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+}
+
+.image-carte {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+}
+
+/* Positionnement du contenu pour les grandes cartes */
+.carte-large .contenu {
+    position: relative;
+    z-index: 1;
+    max-width: 45%;
+}
+
+
+/* Gallery */
+.gallery {
+    background-color: #f1faee;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Ajouter une marge en bas pour espacer le diaporama de la vidéo */
+}
+
+.gallery img {
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    transition: all ease-out 0.5s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.gallery img:hover {
+    width: 50%;
+}
+
+/* Vidéo */
+#ma-section-video {
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px; /* Ajouter une marge en haut pour espacer la vidéo du diaporama */
+}
+
+#ma-section-video video {
+    width: 100%; /* La vidéo prend toute la largeur de la page */
+    max-height: 300px; /* Ajuste cette valeur */
+    object-fit: cover; /* Assure que la vidéo reste bien cadrée */
+}
+
+
+
+/* Galerie de Rallye */
+.titre-rallye {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.titre-rallye h1 {
+    color: #c1121f;
+    font-size: 50px;
+    margin-bottom: 15px;
+    padding: 50px;
+}
+
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 6rem 2rem 2rem;
+}
+
+.element-galerie {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.element-galerie img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.element-galerie:hover img {
+    transform: scale(1.05);
+}
+
+
+/* Section Actualités */
+.actualite-en-vedette {
+    background-color: var(--card-background);
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Centre et agrandit le texte du compte à rebours */
+#compte-a-rebours {
+    text-align: center;
+    font-size: 40px;  /* Ajuste cette valeur pour changer la taille du texte */
+    margin-top: 20px;
+}
+
+#compte-a-rebours p {
+    margin: 0;
+}
+
+/* Optionnel : Ajoute une légère ombre au texte pour le rendre plus visible */
+#compte-a-rebours #temps {
+    color: #333;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+
+.actualite-en-vedette img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.actualite-en-vedette .contenu {
+    padding: 2rem;
+}
+
+.grille-des-actualites {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.carte-actualite {
+    background-color: var(--card-background);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carte-actualite:hover {
+    transform: translateY(-5px);
+}
+
+.carte-actualite img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.carte-actualite .contenu {
+    padding: 1.5rem;
+}
+
+.categorie {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #4b5563;
+}
+
+/* Suite d'actualité */
+.btn-telechargement { 
+display: inline-flex; 
+align-items: center; 
+padding: 0.5rem 1rem; 
+background-color: #c1121f; 
+color: white; 
+text-decoration: none; 
+border-radius: 4px; 
+transition: background-color 0.3s ease; } 
+
+.btn-telechargement:hover { 
+    background-color: #a00f1b; } 
+    
+.btn-telechargement .fas { 
+    margin-left: 0.5rem; }
+
+/* Formulaire de Contact */
+.background-image {
+    background-image: url('Page-de-fond-contact.jpg'); /* Remplacez 'votre-image.jpg' par le nom de votre image */
+    background-size: cover; /* Ajuste l'image pour couvrir tout l'arrière-plan */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    padding: 2rem; /* Ajoute un peu de padding autour du contenu */}
+
+.formulaire-contact {
+    max-width: 600px;
+    margin: 8rem auto 2rem;
+    padding: 2rem;
+    background-color:rgb(255 255 255 / 14%); /* Couleur blanche avec opacité de 0.8 */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.groupe-formulaire {
+    margin-bottom: 1.5rem;
+}
+
+.groupe-formulaire label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.groupe-formulaire input,
+.groupe-formulaire textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgb(221 221 221 / 0%); /* Bordure avec opacité */
+    background-color: rgb(255 255 255 / 33%); /* Couleur blanche avec opacité de 0.8 */
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.groupe-formulaire textarea {
+    height: 150px;
+    resize: vertical;
+}
+/* Centre le bouton dans le formulaire */
+.button-container {
+    text-align: center; /* Centre le contenu à l'intérieur du conteneur */
+}
+
+.btn-envoyer {
+    background-color:rgb(230 57 70 / 27%); /* Couleur avec opacité de 0.8 */
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-envoyer:hover {
+    background-color: #c1121e6e;
+}
+
+
+
+/* Style pour la page de confirmation avec image de fond */
+.confirmation-body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Righteous', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('img-de-fond-rallye.jpg'); /* Remplacez 'votre-image.jpg' par le nom de image */
+    background-size: cover; /* Ajuste l'image pour couvrir tout l'arrière-plan */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Empêche l'image de se répéter */
+    color: #fff;
+}
+
+.confirmation-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2); /* Fond semi-transparent */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* Effet de flou en arrière-plan */
+}
+
+.confirmation-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.confirmation-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.confirmation-container button {
+    background: #ffffff;
+    color: #e63946;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+    font-size: 1rem;
+    font-family: 'Righteous', sans-serif;
+}
+
+.confirmation-container button:hover {
+    background: #f2f2f2;
+    transform: scale(1.05);
+}
+
+.confirmation-container button:active {
+    transform: scale(0.95);
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
