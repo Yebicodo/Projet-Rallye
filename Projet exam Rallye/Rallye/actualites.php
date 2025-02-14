@@ -76,7 +76,7 @@ if ($conn->connect_error) {
                     echo "<article class='carte-actualite'>";
                     echo "<img src='" . $row["image_path"] . "' alt='Image d'actualité'>"; // Utilise le chemin de l'image stocké
                     echo "<div class='contenu'>";
-                    echo "<span class='categorie'>Actualité</span>";
+                    // echo "<span class='categorie'>Actualité</span>";
                     echo "<h3>" . $row["title"] . "</h3>";
                     echo "<p>" . $row["content"] . "</p>";
                     echo "<p><em>par " . $row["author"] . " le " . $row["publish_date"] . "</em></p>";
