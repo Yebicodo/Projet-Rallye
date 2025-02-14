@@ -18,3 +18,12 @@ var x = setInterval(function() {
         document.getElementById("temps").innerHTML = "C'est parti !";
     }
 }, 1000);
+
+
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});

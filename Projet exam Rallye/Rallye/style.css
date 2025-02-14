@@ -57,6 +57,47 @@ nav {
     border-radius: 4px;
 }
 
+/* Responsive Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--secondary-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        margin: 0;
+        border-top: 1px solid var(--primary-color);
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
