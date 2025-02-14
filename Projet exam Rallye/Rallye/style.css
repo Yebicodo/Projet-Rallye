@@ -352,6 +352,7 @@ p {
 
 #compte-a-rebours p {
     margin: 0;
+    font-size: 30px;
 }
 
 /* Optionnel : Ajoute une légère ombre au texte pour le rendre plus visible */
