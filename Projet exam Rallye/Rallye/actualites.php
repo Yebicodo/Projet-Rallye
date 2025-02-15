@@ -1,8 +1,13 @@
 <?php
-// Activer le mode débogage
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
+// Activer le mode débogage 
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+
+ini_set('log_errors', 1); // Active la journalisation des erreurs
+ini_set('error_log', 'path/to/error.log'); // Définis un fichier de log
+
 
 // Informations de connexion
 $servername = "localhost";
@@ -94,5 +99,6 @@ if ($conn->connect_error) {
 
     <footer>
         <p>&copy; 2024 RallyePéÏ. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
