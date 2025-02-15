@@ -50,7 +50,7 @@ if ($conn->connect_error) {
 
     <main>
         <article class="actualite-en-vedette">
-            <img src="img/Actualité(6).jpg" alt="Image à la une">
+            <img src="img St pierre\Actualité(6).jpg" alt="Image à la une">
             <div class="contenu">
                 <!-- <span class="categorie">À la une</span> -->
                 <h2>Les événements marquants de l'année 2024</h2>
