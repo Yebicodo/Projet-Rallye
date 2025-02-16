@@ -5,7 +5,7 @@
         <h2 class="entête">Découvrez l'univers palpitant du rallye automobile</h2>
         <div class="grille">
             <!-- Performances -->
-            <a href="galerie.php" class="carte carte-large orange">
+            <a href="galerie.html" class="carte carte-large orange">
                 <div class="contenu">
                     <span class="numéro">01</span>
                     <h3>PERFORMANCES</h3>
@@ -37,10 +37,10 @@
             </a>
 
             <!-- Adhésion -->
-            <a href="adhesion.php" class="carte bleu-moyen">
+            <a href="contact.html" class="carte bleu-moyen">
                 <span class="numéro">05</span>
-                <h3>ADHÉSION</h3>
-                <p>Rejoignez notre communauté et participez à des événements exclusifs.</p>
+                <h3>CONTACTEZ-NOUS</h3>
+                <p>Des questions? Besoin d'informations? Contactez-nous</p>
             </a>
         </div>
     </div>
@@ -55,7 +55,7 @@
     </div>
     <section id="ma-section-video">
         <video controls loop>
-            <source src="Videoexemplerallye.mp4" type="video/mp4">
+            <source src="rallyejeanpetit.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </section>
