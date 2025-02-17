@@ -34,9 +34,15 @@ nav {
 }
 
 .logo {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+/* Ajout des propriétés CSS pour l'image du logo */
+.logo img {
+    height: 50px; /* Ajustez cette valeur selon la taille souhaitée */
+    max-height: 100%; /* Assurez-vous que l'image ne dépasse pas le header */
+    width: auto; /* Garde les proportions de l'image */
 }
 
 .nav-links {
@@ -56,6 +62,7 @@ nav {
     background-color: var(--primary-color);
     border-radius: 4px;
 }
+
 
 /* Responsive Menu */
 .menu-toggle {

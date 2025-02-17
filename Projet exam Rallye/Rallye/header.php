@@ -11,7 +11,10 @@
 </head>
 <body>
     <nav>
-        <div class="logo">RallyePéÏ</div>
+        <!-- Remplacement du texte par une image -->
+        <div class="logo">
+            <img src="Logo.webp" alt="Logo RallyePéÏ">
+        </div>
         <div class="menu-toggle">
             <div class="hamburger"></div>
             <div class="hamburger"></div>
@@ -30,3 +33,5 @@
             <a href="galerie.php" class="cta-button">Découvrir</a>
         </div>
     </header>
+</body>
+</html>
