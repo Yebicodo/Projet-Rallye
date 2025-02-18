@@ -26,7 +26,7 @@ if ($conn->connect_error) {
 
 ?>
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -37,7 +37,7 @@ if ($conn->connect_error) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
-<body>
+<body> 
     <nav>
         <div class="logo">RallyePéÏ</div>
         <ul class="nav-links">
@@ -46,13 +46,13 @@ if ($conn->connect_error) {
             <li><a href="actualite.php" class="active">Actualités</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav> -->
+    </nav>
 
     <main>
         <article class="actualite-en-vedette">
             <img src="img St pierre\Actualité(6).jpg" alt="Image à la une">
             <div class="contenu">
-                <!-- <span class="categorie">À la une</span> -->
+                <!-- <span class="categorie">À la une</span>
                 <h2>Les événements marquants de l'année 2024</h2>
             </div>
         </article>
@@ -100,8 +100,8 @@ if ($conn->connect_error) {
         </section>
     </main>
 
-    <!-- <footer>
+    <footer>
         <p>&copy; 2024 RallyePéÏ. Tous droits réservés.</p>
     </footer>
 </body>
-</html> -->
+</html>
