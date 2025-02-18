@@ -27,11 +27,5 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Bienvenue sur RallyePéÏ</h1>
-            <a href="galerie.php" class="cta-button">Découvrir</a>
-        </div>
-    </header>
 </body>
 </html>
