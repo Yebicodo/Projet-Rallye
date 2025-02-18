@@ -302,6 +302,8 @@ p {
     object-fit: cover; /* Assure que la vidéo reste bien cadrée */
 }
 
+
+
 /* Galerie de Rallye */
 .titre-rallye {
     text-align: center;
@@ -568,4 +570,21 @@ footer {
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
 }

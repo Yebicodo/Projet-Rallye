@@ -5,7 +5,7 @@
         <h2 class="entête">Découvrez l'univers palpitant du rallye automobile</h2>
         <div class="grille">
             <!-- Performances -->
-            <a href="galerie.php" class="carte carte-large orange">
+            <a href="galerie.html" class="carte carte-large orange">
                 <div class="contenu">
                     <span class="numéro">01</span>
                     <h3>PERFORMANCES</h3>
