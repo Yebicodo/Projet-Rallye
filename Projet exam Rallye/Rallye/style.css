@@ -305,13 +305,21 @@ p {
 
 
 /* Galerie de Rallye */
+.titre-rallye h1 {
+    margin-bottom: 15px;
+    font-size: 50px;
+    background: rgba(0, 0, 0, 0.5); /* Ajouté pour améliorer la lisibilité du texte */
+    padding: 10px; /* Ajouté pour améliorer la lisibilité du texte */
+    border-radius: 8px; /* Ajouté pour améliorer l'esthétique */
+}
+
 .titre-rallye {
     text-align: center;
     margin-top: 2rem;
 }
 
 .titre-rallye h1 {
-    color: #c1121f;
+    color: #d14e56;
     font-size: 50px;
     margin-bottom: 15px;
     padding: 50px;
