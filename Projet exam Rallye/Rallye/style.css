@@ -298,9 +298,6 @@ p {
     object-fit: cover;
 }
 
-
-
-
 /* Galerie de Rallye */
 .titre-rallye {
     text-align: center;
@@ -421,7 +418,7 @@ h3 {
 }
 
 p {
-    color: #4b5563;
+    color: #03060a;
 }
 
 /* Suite d'actualité */
@@ -569,6 +566,24 @@ footer {
     margin-top: 2rem;
 }
 
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-icons img {
+    width: 30px; /* Ajuste cette valeur selon ta préférence */
+    height: auto;
+    transition: transform 0.3s ease; /* Ajoute une animation lors du survol */
+}
+
+.footer-icons img:hover {
+    transform: scale(1.2); /* Agrandit l'icône lors du survol */
+}
 
 
 /* Responsive Design */
