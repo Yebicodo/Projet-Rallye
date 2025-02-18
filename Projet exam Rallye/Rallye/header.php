@@ -13,7 +13,7 @@
     <nav>
         <!-- Remplacement du texte par une image -->
         <div class="logo">
-            <img src="Logo.webp" alt="Logo RallyePéÏ">
+        <h1>RallyePéÏ</h1>
         </div>
         <div class="menu-toggle">
             <div class="hamburger"></div>

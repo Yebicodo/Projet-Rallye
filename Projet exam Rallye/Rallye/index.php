@@ -17,7 +17,7 @@
                     <h3>PERFORMANCES</h3>
                     <p>Des voitures exceptionnelles pour des courses palpitantes.</p>
                 </div>
-                <img src="rally_reunion_banner.jpg" alt="Voiture de sport">
+                <img src="Logo-rally_reunion_banner.png" alt="Voiture de sport">
             </a>
 
             <!-- Compétitions -->
