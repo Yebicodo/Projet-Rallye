@@ -8,7 +8,6 @@
 ini_set('log_errors', 1); // Active la journalisation des erreurs
 ini_set('error_log', 'path/to/error.log'); // Définis un fichier de log
 
-
 // Informations de connexion
 $servername = "localhost";
 $username = "root";
@@ -16,7 +15,7 @@ $password = "";
 $dbname = "Projet-Rallye";
 
 // Créer la connexion
-$conn = @new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Vérifier la connexion
 if ($conn->connect_error) {
@@ -24,6 +23,7 @@ if ($conn->connect_error) {
 } else {
     // echo "Connexion réussie<br>";
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +44,7 @@ if ($conn->connect_error) {
             <li><a href="index.php">Accueil</a></li>
             <li><a href="galerie.html">Galerie</a></li>
             <li><a href="actualite.php" class="active">Actualités</a></li>
-            <li><a href="contact.php">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
@@ -67,8 +67,10 @@ if ($conn->connect_error) {
         
         <section class="grille-des-actualites">
             <?php
-            $sql = "SELECT title, content, author, publish_date, image_path FROM actualites";
-            $result = $conn->query($sql);
+            // Préparer la requête SQL
+            $stmt = $conn->prepare("SELECT title, content, author, publish_date, image_path FROM actualites");
+            $stmt->execute();
+            $result = $stmt->get_result();
 
             if (!$result) {
                 die("Erreur dans la requête SQL : " . $conn->error);
@@ -79,12 +81,12 @@ if ($conn->connect_error) {
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
                     echo "<article class='carte-actualite'>";
-                    echo "<img src='" . $row["image_path"] . "' alt='Image d'actualité'>"; // Utilise le chemin de l'image stocké
+                    echo "<img src='" . htmlspecialchars($row["image_path"]) . "' alt='Image d'actualité'>"; // Utilise le chemin de l'image stocké
                     echo "<div class='contenu'>";
                     // echo "<span class='categorie'>Actualité</span>";
-                    echo "<h3>" . $row["title"] . "</h3>";
-                    echo "<p>" . $row["content"] . "</p>";
-                    echo "<p><em>par " . $row["author"] . " le " . $row["publish_date"] . "</em></p>";
+                    echo "<h3>" . htmlspecialchars($row["title"]) . "</h3>";
+                    echo "<p>" . htmlspecialchars($row["content"]) . "</p>";
+                    echo "<p><em>par " . htmlspecialchars($row["author"]) . " le " . htmlspecialchars($row["publish_date"]) . "</em></p>";
                     echo "</div>";
                     echo "</article>";
                 }
@@ -92,6 +94,7 @@ if ($conn->connect_error) {
                 echo "Aucune actualité trouvée.";
             }
 
+            $stmt->close();
             $conn->close();
             ?>
         </section>

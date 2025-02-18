@@ -22,7 +22,7 @@
         </div>
         <ul class="nav-links">
             <li><a href="index.php" class="active">Accueil</a></li>
-            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="galerie.php">Galerie</a></li>
             <li><a href="actualites.php">Actualités</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
