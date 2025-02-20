@@ -402,10 +402,6 @@ p {
     padding: 1.5rem;
 }
 
-.categorie {
-    display: none;
-}
-
 
 h2 {
     font-size: 2rem;
@@ -586,17 +582,3 @@ footer {
 }
 
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .features {
-        grid-template-columns: 1fr;
-    }
-}
