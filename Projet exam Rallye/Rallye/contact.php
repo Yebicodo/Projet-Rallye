@@ -24,6 +24,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
+    // Connexion à la base de données
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "Projet-Rallye";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if ($conn->connect_error) {
+        die("Erreur de connexion à la base de données : " . $conn->connect_error);
+    }
+
+    // Préparation de la requête d'insertion
+    $stmt = $conn->prepare("INSERT INTO contact (name, email, message, contact_date) VALUES (?, ?, ?, NOW())");
+    $stmt->bind_param("sss", $name, $email, $message);
+
+    if ($stmt->execute() === TRUE) {
+        // L'enregistrement a été inséré avec succès dans la base de données
+    } else {
+        echo "Erreur : " . $stmt->error;
+    }
+
+    $stmt->close();
+    $conn->close();
+
     $mail = new PHPMailer(true);
 
     try {
