@@ -13,8 +13,9 @@
     <nav>
         <!-- Remplacement du texte par une image -->
         <div class="logo">
-        <h1>RallyePéÏ</h1>
-        </div>
+    <img src="LOGO.png" alt="RallyePéÏ">
+</div>
+
         <div class="menu-toggle">
             <div class="hamburger"></div>
             <div class="hamburger"></div>

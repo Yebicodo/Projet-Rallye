@@ -33,10 +33,10 @@ nav {
     align-items: center;
 }
 
-.logo h1{
+.logo img {
     display: flex;
     align-items: center;
-    color: white;
+    height: 50px; /* Ajustez la hauteur de l'image selon vos besoins */
 }
 
 .nav-links {
