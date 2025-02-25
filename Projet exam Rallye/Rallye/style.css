@@ -552,7 +552,6 @@ transition: background-color 0.3s ease; }
     transform: scale(0.95);
 }
 
-
 /* Footer */
 footer {
     background-color: var(--secondary-color);
@@ -572,13 +571,14 @@ footer {
 }
 
 .footer-icons img {
-    width: 30px; /* Ajuste cette valeur selon ta préférence */
-    height: auto;
+    width: auto; /* Laisser la largeur s'ajuster automatiquement */
+    height: auto; /* Laisser la hauteur s'ajuster automatiquement */
+    max-width: 100px; /* Valeur maximale pour la largeur */
+    max-height: 30px; /* Valeur maximale pour la hauteur */
     transition: transform 0.3s ease; /* Ajoute une animation lors du survol */
 }
 
 .footer-icons img:hover {
     transform: scale(1.2); /* Agrandit l'icône lors du survol */
 }
-
 
